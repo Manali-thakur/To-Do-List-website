@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #0b3d91;
+  --seconday-color: #3ba7f2;
+  --success-color: #7fe7d6;
+  --bg-color: #e8f6ff;
+}
+
+body {
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  margin: 0px;
+  height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+  position: relative;
+  top: 0px;
+}
+
+header h2 {
+  margin: 0px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button button {
+  width: 80px;
+  height: 30px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: snow;
+  border: 0px;
+  cursor: pointer;
+}
+
+main {
+  margin: 10px;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.listItem {
+  border: 10px;
+  margin: 5px;
+  background-color: var(--seconday-color);
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.listItem button {
+  background-color: var(--bg-color);
+  margin: 5px;
+  border-radius: 5px;
+  width: 4rem;
+}
+
+.listItemInput {
+  width: 90%;
+  margin: 10px;
+}
+
+.tickbox {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 11px 0px 0px 10px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid black;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.tickbox:checked {
+  background: var(--seconday-color);
+  border-color: var(--seconday-color);
+}
+
+.tickbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: -7px;
+  width: 8px;
+  height: 28px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  transform: rotate(40deg);
+}
+
+.tickbox:focus-visible {
+  outline: 2px solid var(--seconday-color);
+  outline-offset: 2px;
+}
+
+.congratsBox {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+  background-color: var(--success-color);
+}
+
+.deleteMessage {
+  background-color: red;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
