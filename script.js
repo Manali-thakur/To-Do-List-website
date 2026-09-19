@@ -102,6 +102,13 @@ function createTaskElement(taskData, isNew) {
     saveTasks();
   });
 
+  listItemInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      doneButton.click();
+    }
+  });
+
   editButton.addEventListener("click", () => {
     editButton.hidden = true;
     listItemInput.readOnly = false;
